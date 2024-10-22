@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    /* Add custom styling for the table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+        margin-bottom:30px;
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd; /* Add borders to the cells */
+    }
+    th {
+        background-color: #f2f2f2; /* Light gray background for header */
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9; /* Zebra striping for rows */
+    }
+    a {
+        text-decoration: none;
+        color: blue; /* Link color */
+    }
+</style>
+
+<div style="height: 120px;"></div> 
+
+{% comment %} <h1 style="color: white;">Welcome {{ name }} ({{ email }})!</h1> {% endcomment %}
+ 
+
+
+<h1 style="text-align: center; font-family: 'Mooli', cursive">Order List</h1>
+<a href="{% url 'order' %}" > <button  style="position: relative;
+    width: 180px;
+    padding: 12px 2px;
+    text-align: center;
+    border: 3px solid black;
+    background: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top:30px;"    >  Create New Order </button>  </a>
+   
+   {% for data in data %}
+    <tr>
+        <td>{{ query_data.name }}</td>
+        {% comment %} <td>{{ data.email }}</td> {% endcomment %}
+
+        <td>
+    {% endfor %}
+    
+<table>
+    <tr>
+        <th> No.</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Count</th>
+        <th>Food Name</th>
+        <th>Address</th>
+        <th>Actions</th>
+    </tr>
+    {% for order in orders %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ order.name }}</td>
+        <td>{{ order.email }}</td>
+        <td>{{ order.phone_number }}</td>
+        <td>{{ order.count }}</td>
+        <td>{{ order.food_name }}</td>
+        <td>{{ order.address }}</td>
+        <td>
+            <a href="{% url 'order_update' order.pk %}">Edit</a>
+            <form action="{% url 'order_delete' order.pk %}" method="POST" style="display:inline;">
+                {% csrf_token %}
+                <input type="submit" value="Delete">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

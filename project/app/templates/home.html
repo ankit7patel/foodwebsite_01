@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    <!-- <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white; /* Default text color */
+        }
+
+        section {
+            text-align: center; /* Center align text */
+            padding: 20px; /* Padding around section */
+            position: relative; /* Positioning context for children */
+            z-index: 1; /* Bring section above the image */
+            background: url("{% static 'images/bg.jpg' %}") no-repeat center center fixed; /* Set background image */
+            background-size: cover; /* Cover entire section */
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Use flexbox to center content */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; /* Center vertically */
+        }
+
+        .main {
+            margin-bottom: 20px; /* Space below main section */
+        }
+
+        .men_text h1 {
+            font-size: 2.5em; /* Responsive font size */
+        }
+
+        .main_btn {
+            margin-top: 20px; /* Space above button */
+        }
+
+        .main_btn button {
+            padding: 10px 20px; /* Button padding */
+            background-color: #ff5722; /* Button color */
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1em; /* Responsive font size */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .main_btn button:hover {
+            background-color: #e64a19; /* Darker shade on hover */
+        }
+
+        .media {
+            margin-top: 20px; /* Space above social icons */
+            font-size: 1.5em; /* Icon size */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .men_text h1 {
+                font-size: 2em; /* Smaller font size for tablets */
+            }
+
+            .main_btn button {
+                font-size: 0.9em; /* Smaller button font size */
+            }
+
+            .media {
+                font-size: 1.2em; /* Smaller icon size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .men_text h1 {
+                font-size: 1.5em; /* Even smaller for mobile */
+            }
+
+            .main_btn button {
+                padding: 8px 16px; /* Adjust button padding */
+            }
+
+            .media {
+                font-size: 1em; /* Further reduce icon size */
+            }
+        }
+    </style> -->
+
+</head>
+<body>
+        {% block content %}
+        <section class="home">
+            <div class="overlay"></div>
+            <div class="main"> 
+                <div class="men_text">
+                    <p>Searching for Your</p>
+                    <h1>Next Bite of<span> Delight?</span></h1>
+                    <p>It's Right Here!</p>
+                </div>
+                <div class="main_btn">
+                    <button type="button"><a href="{% url 'order' %}" style="color: white; text-decoration: none;">Order Now</a></button>
+                </div>
+                <h1>Welcome, {{ data.name }}!</h1>
+            </div>
+        </section>
+        {% endblock %}
+
+
+</body>
+</html>    

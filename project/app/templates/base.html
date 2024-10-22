@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Base styles for mobile */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column; /* Stack items on mobile */
+            align-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Make the nav horizontal on larger screens */
+        @media (min-width: 768px) {
+            nav {
+                flex-direction: row; /* Horizontal layout for larger screens */
+                justify-content: space-between;
+            }
+
+            ul {
+                display: flex; /* Use flexbox for navigation */
+            }
+
+            li {
+                margin: 0 10px; /* Add some spacing between items */
+            }
+        }
+
+        /* Style the footer */
+        footer {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .footer_main {
+            display: flex;
+            flex-wrap: wrap; /* Allow footer tags to wrap on small screens */
+        }
+
+        .footer_tag {
+            flex: 1 1 200px; /* Make footer tags flexible */
+            margin: 10px;
+        }
+
+        /* Responsive images */
+        img {
+            max-width: 100%; /* Make images responsive */
+            height: auto;    /* Maintain aspect ratio */
+        }
+
+        /* Make section responsive */
+        section {
+            padding: 20px;
+            width: 90%; /* Use a percentage instead of a fixed width */
+            margin: auto; /* Center the section */
+        }
+    </style>
+</head>
+<body>
+    <section id="Home">
+        <nav>
+            <div class="logo">
+                <img src="{% static 'images/logo/edit.png' %}" alt="My image"/>
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'review' %}">Review</a></li>
+                <li><a href="{% url 'order' %}">Order</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Food Services</h2>
+                <p>Place Orders</p>
+                <p>Fast Delivery & Takeout</p>
+                <p>Secure Payment Options</p>
+                <p>Order Tracking</p>
+                <p>Customer Reviews</p>
+                <p>Exclusive Promotions</p>
+                <p>24/7 Customer Support</p>
+                <p>Diverse Cuisine Selection</p>
+                <p>Special Dietary Options</p>
+                <p>Pre-Schedule Your Orders</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Links</h2>
+                <p>Home</p>
+                <p>About</p>
+                <p>Menu</p>
+                <p>Gallery</p>
+                <p>Order</p>
+                <p>Links to Privacy Policy</p>
+                <p>Terms of Service</p>
+                <p>FAQs</p>
+                <p>Careers</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Location</h2>
+                <p>Sainkheda</p>
+                <p>Gadarwara</p>
+                <p>Bhopal</p>
+                <p>Indore</p>
+                <p>Ujjain</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact Us</h2>
+                <p>+91 7024911772</p>
+                <p>ankitptl7024@gmail.com</p>
+                <p>ankuptlll877@gmail.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Stay Connected</h2>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+            <div class="footer_tag">
+                <img src="{% static 'images/logo/edf.png' %}">
+                <h2>SavoryDelightsHub</h2>
+            </div>
+        </div>
+        <p class="me">© Designed by <span><i class="fa-solid fa-face-grin"></i> Ankittt Patel</span> | All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block content %}
+<div class="about" id="About">
+        <div class="about_main">
+            <div class="image">
+                <img src="{% static 'images/paneer.jpg' %}">
+            </div>
+
+            <div class="about_text">
+                <h1><span>About</span> Us</h1>
+                <h3>Why Choose Us?</h3>
+                <p>
+                    Choose us for an unparalleled culinary experience. Our dedicated chefs infuse passion into every dish, creating a symphony of flavors that delight the palate. We offer a diverse menu, blending authenticity with innovation, ensuring there's something for every taste. Come savor extraordinary meals, and let us elevate your dining journey.
+                </p>
+            </div>
+        </div>
+        <div class="about_btn">
+            <button type="button"><span></span><a href="#">Order Now</a></button>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+        
+    </div>
+{% endblock %}

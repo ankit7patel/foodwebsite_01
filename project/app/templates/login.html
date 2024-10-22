@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">----------Login Page-----------</h1>
+    <div align="center">
+
+    <h3> {{msg}} </h3> 
+    <form action="{% url 'login' %}"  method="post">
+
+        {% csrf_token %}
+
+
+            <input type="email" name="email" id=""placeholder="Enter Your Email"><br><br>
+            <input type="password" name="password" id="" placeholder="Enter Your password"><br><br>
+            <button>Login</button>
+        </form>
+        <a class="btn btn-secondary" href="{% url 'register' %}">Register</a>
+    </div>
+</body>
+</html>

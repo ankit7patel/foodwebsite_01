@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+
+
+   .form-container {
+    max-width: 600px; /* Limit the width of the form */
+    margin: 0px auto; /* Center the form and add more top margin */
+    padding: 30px; /* Add padding inside the form */
+    border: 3px solid #ddd; /* Light border around the form */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; /* White background */
+    margin-bottom:30px;
+}
+
+
+    h1 {
+        text-align: center; /* Center the heading */
+        color: #333; /* Dark color for the heading */
+    }
+
+    .input {
+        margin-bottom: 15px; /* Space between input fields */
+    }
+
+    .input p {
+        margin-bottom: 5px; /* Space below the label */
+        font-weight: bold; /* Bold labels */
+        color: #555; /* Slightly darker text color */
+    }
+
+    .input input[type="text"],
+    .input input[type="email"],
+    .input input[type="number"] {
+        width: 100%; /* Full width inputs */
+        padding: 10px; /* Padding inside inputs */
+        border: 1px solid #ccc; /* Light border */
+        border-radius: 4px; /* Rounded corners */
+        box-sizing: border-box; /* Include padding and border in the width */
+    }
+
+    .input input[type="submit"] {
+        width: 100%; /* Full width button */
+        padding: 10px; /* Padding inside the button */
+        background-color: #28a745; /* Green background */
+        color: white; /* White text */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 16px; /* Larger text */
+        transition: background-color 0.3s; /* Smooth background change */
+    }
+
+    .input input[type="submit"]:hover {
+        background-color: #218838; /* Darker green on hover */
+    }
+</style>
+<div style="height: 120px;"></div> 
+<div class="form-container">
+    <h1 style="font-family: 'Mooli', cursive" >Edit Order</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="input">
+            <p>Name</p>
+            <input type="text" name="name" value="{{ order.name }}" required>
+        </div>
+        <div class="input">
+            <p>Email</p>
+            <input type="email" name="email" value="{{ order.email }}" required>
+        </div>
+        <div class="input">
+            <p>Number</p>
+            <input type="text" name="number" value="{{ order.phone_number }}" required>
+        </div>
+        <div class="input">
+            <p>Count</p>
+            <input type="number" name="count" value="{{ order.count }}" required>
+        </div>
+        <div class="input">
+            <p>Your Order</p>
+            <input type="text" name="food_name" value="{{ order.food_name }}" required>
+        </div>
+        <div class="input">
+            <p>Address</p>
+            <input type="text" name="address" value="{{ order.address }}" required>
+        </div>
+        <input type="submit" value="Update Order">
+    </form>
+</div>
+{% endblock %}

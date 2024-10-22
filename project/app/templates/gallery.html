@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+
+{% block content %}
+
+   <div class="gallery" id="Gallery">
+        <h1>Our<span>Gallery</span></h1>
+
+        <div class="gallery_image_box">
+            <div class="gallery_image">
+                <img src="{% static 'images/caramel-ice-creame.jpg' %}">
+
+                <h3>Caramel Ice-Cream</h3>
+                <p>
+                    Join us for a delightful treat! Indulge in our luscious caramel ice cream, a symphony of sweetness waiting to satisfy your cravings.
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="{% static 'images/cup_cake.avif' %}">
+
+                <h3>Cup Cakes</h3>
+                <p>
+                    Join us for a taste of heaven! Our exquisite cupcakes, adorned with intricate designs and irresistible flavors, promise pure indulgence.
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="{% static 'images/brownie.webp' %}">
+
+                <h3>Walnut Brownie</h3>
+                <p>
+                    Satisfy your sweet tooth with our delectable walnut brownie! Dive into layers of rich chocolate and crunchy walnuts for pure dessert bliss.
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="{% static 'images/cake.webp' %}">
+
+                <h3>Chocolate Cake</h3>
+                <p>
+                    Indulge in pure chocolate ecstasy! Our sumptuous chocolate cake, moist and decadent, is a heavenly delight for all dessert enthusiasts.
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="{% static 'images/milkshake.webp' %}">
+
+                <h3>Oreo Milkshake</h3>
+                <p>
+                    Craving a sweet delight? Dive into creamy indulgence with our Oreo milkshake – a blend of cookies and dreams, waiting just for you.
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="{% static 'images/fruit-juice.jpg' %}">
+
+                <h3>Fruit Juice</h3>
+                <p>
+                    Experience refreshment in a glass! Savor our revitalizing fruit juice, a vibrant blend of nature's goodness to quench your thirst.
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

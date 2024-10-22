@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <div class="review" id="Review">
+        <h1>Customer<span>Review</span></h1>
+
+        <div class="review_box">
+            <div class="review_card">
+                <div class="review_profile">
+                    <img src="{% static 'images/customers/pic-2.png' %}">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Jane Mitchell</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        "Wow! Your food is an absolute delight. I recently ordered your "Delicious Burger", and it was a burst of flavors in every bite. Fast delivery and friendly service too!"
+                    </p>
+
+                </div>
+
+            </div>
+
+            {% comment %} <div class="review_card">
+                <div class="review_profile">
+                    <img src="{% static 'images/customers/pic-3.png' %}">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">David Thompson</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        "I'm a regular customer here, and I can't get enough of your "SavoryDelightsHub". The "Nutrient-rich Noodles" is my favorite – always cooked to perfection. Keep up the great work!"
+                    </p>
+
+                </div>
+
+            </div> {% endcomment %}
+            <div class="review_card">
+                <div class="review_profile">
+                    <img src="{% static 'images/customers/pic-1.png' %}">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Sarah Davidson</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        "I'm impressed by the variety of cuisines you offer. From Italian to Indian, your menu has something for everyone. The "Piping-hot Pizza" was exceptional, and the portion size was generous."
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="review_card">
+                <div class="review_profile">
+                    <img src="{% static 'images/customers/pic-4.png' %}" >
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Mike Turner</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        "Your customer service is top-notch! I had a special dietary request, and your team accommodated it with ease. The "Walnut Brownie" exceeded my expectations – I'll definitely be ordering again!"
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

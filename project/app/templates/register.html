@@ -1,0 +1,62 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+</head>
+<body>
+    <h1 align="center">---------- Registration Page -----------</h1>
+    <div align="center">
+        <h3>{{ msg }}</h3> 
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Enter Your Name" required><br><br>
+            <input type="email" name="email" placeholder="Enter Your Email" required><br><br>
+            <input type="text" name="contact" placeholder="Enter Your Contact" required><br><br>
+            <input type="password" name="password" placeholder="Enter Your Password" required><br><br>
+            <input type="password" name="confirm_password" placeholder="Confirm Your Password" required><br><br>
+            <button type="submit">Register</button>
+            
+        </form>
+        <form action="{% url 'login' %}"  > 
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> register page </h1>
+    {{msg}}
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+            name:<input type="text" name="name" /> </br> 
+            email:<input type="email" name="email" /> </br> 
+            contact:<input type="tel" name="contact" /> </br> 
+            password:<input type="password" name="password" /> </br>
+            cpassword:<input type="password" name="confirm_password"><br> 
+            <button type="submit" > submit </button> 
+    </form>
+</body>
+</html>
+
+
+
+ {% endcomment %}

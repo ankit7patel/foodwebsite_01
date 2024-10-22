@@ -1,0 +1,328 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="menu" id="Menu">
+        <h1>Our<span>Menu</span></h1>
+
+        <div class="menu_box">
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/burger.avif' %}" alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Delicious Burger</h2>
+                    <p>
+                        A succulent burger: Juicy patty, melting cheese, crisp veggies, and zesty sauce, a symphony of flavors and textures in every bite.
+                    </p>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 400.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/fried-chicken.webp' %}"alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Fried Chicken</h2>
+                    <p>
+                        Crispy, golden-fried chicken, its exterior shatteringly delicious while the inside remains tender and juicy, a harmonious blend of savory seasonings and satisfying crunch.
+                    </p>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 800.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/65.webp' %}" alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Chicken 65</h2>
+                    <p>
+                        Spicy, tender chicken bites, deep-fried to golden perfection, coated in a fiery blend of aromatic spices, a flavor-packed South Indian delicacy.
+                    </p>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 650.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/pizza.avif' %}" alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Piping-hot Pizza</h2>
+                    <p>
+                        Oven-fresh, cheesy, and aromatic, a delightful medley of toppings atop a golden crust, an irresistible slice of heaven.
+                    </p>
+                    <br>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 500.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/noodles.jpg' %}"alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Nutrient-rich Noodles</h2>
+                    <p>
+                        Versatile and comforting, these strands of wheat or rice are boiled to perfection and often stir-fried with a myriad of flavorful ingredients.
+                    </p>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 250.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/pasta.JPG' %}"  alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Pasta</h2>
+                    <p>
+                        Versatile Italian staple, crafted from durum wheat semolina, available in various shapes and sizes, serving as a canvas for diverse sauces.
+                    </p>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 250.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/sandwich.webp' %}"  alt="error">
+                </div> 
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Savory Sandwich</h2>
+                    <p>
+                        A delightful culinary creation, consisting of layers of ingredients between slices of bread, offering endless combinations of flavors and textures.
+                    </p>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 350.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/fries.jpg' %}" alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Flavorful Fries</h2>
+                    <p>
+                        Golden, crispy potato strips, seasoned to perfection, a classic side dish that's irresistibly crunchy on the outside and tender inside.
+                    </p>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 350.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/lemon-sambr.jpg' %}" alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Chitrannam (Lemon Rice)</h2>
+                    <p>
+                        A vibrant South Indian dish, bursting with tangy and zesty flavors, featuring rice, spices, and a mix of delectable ingredients.
+                    </p>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 500.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/paneer2.jpg' %}" alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Palatable Paneer</h2>
+                    <p>
+                        A versatile Indian cheese, mild and creamy in taste, made from coagulated milk, commonly used in a variety of savory and sweet dishes.
+                    </p>
+                    <br>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 450.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/chicken.webp' %}" alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Chicken Biryani</h2>
+                    <p>
+                        A fragrant Indian dish, marrying succulent chicken, aromatic spices, and long-grain rice, creating a flavorful, one-pot masterpiece.
+                    </p>
+                    <br>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 750.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="{% static 'images/Egg-Curry-9-Edit-720x720.jpg' %}"  alt="error">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Egg Curry</h2>
+                    <p>
+                        A savory Indian dish featuring boiled eggs immersed in a rich, spiced tomato-based gravy, bursting with flavor and aroma.
+                    </p>
+                    <br>
+                    <h3><i class="fa-solid fa-indian-rupee-sign"></i> 450.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="{% url 'order' %}" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
